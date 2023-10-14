@@ -1,16 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MdOutlineApps, MdOutlineAddChart, MdLogout } from "react-icons/md";
 
 export default function AdminSidebar() {
   return (
-    <div className="flex flex-row lg:flex-col w-full lg:w-[15%] items-start justify-center p-4 gap-8 bg-zinc-900">
-      <Menu href={"/"} icons={<MdOutlineApps size="22" />} name={"Beranda"} />
-      <Menu
-        href={"/"}
-        icons={<MdOutlineAddChart size="22" />}
-        name={"Log Book"}
+    <div className="flex flex-col w-full lg:w-[20%] items-center justify-center p-8 gap-8 lg:gap-16 bg-zinc-900">
+      <Image
+        className="flex lg:hidden"
+        src="/poltekkesSemarangLogo.png"
+        width="240"
+        height="240"
+        alt="poltekkesSemarangLogo"
       />
-      <Menu href={"/"} icons={<MdLogout size="22" />} name={"Logout"} />
+      <Image
+        className="hidden lg:flex"
+        src="/poltekkesSemarangLogo.png"
+        width="320"
+        height="320"
+        alt="poltekkesSemarangLogo"
+      />
+      <div className="flex flex-row lg:flex-col w-full justify-center gap-8">
+        <Menu href={"/"} icons={<MdOutlineApps size="22" />} name={"Beranda"} />
+        <Menu
+          href={"/"}
+          icons={<MdOutlineAddChart size="22" />}
+          name={"Log Book"}
+        />
+        <Menu href={"/"} icons={<MdLogout size="22" />} name={"Logout"} />
+      </div>
     </div>
   );
 }
