@@ -24,7 +24,12 @@ export default function AdminSidebar() {
         <Menu
           href={"/"}
           icons={<MdOutlineAddChart size="22" />}
-          name={"Log Book"}
+          name={"Tugas Akhir"}
+        />
+        <Menu
+          href={"/"}
+          icons={<MdBook size="22" />}
+          name={"Judul Yang Sudah Ada"}
         />
         <Menu href={"/"} icons={<MdLogout size="22" />} name={"Logout"} />
       </div>
