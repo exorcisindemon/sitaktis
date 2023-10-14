@@ -2,6 +2,7 @@
 
 import { MdLogin } from "react-icons/md";
 
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -44,10 +45,13 @@ export default function Home() {
               <span className="text-sky-300 mr-1">*</span>Pastikan kredensial
               yang dimasukkan sudah benar
             </p>
-            <button className="bg-zinc-100 transition-all hover:bg-zinc-200 p-4 font-semibold text-sm lg:text-lg rounded-lg">
+            <Link
+              href="/user/dashboard"
+              className="bg-zinc-100 transition-all hover:bg-zinc-200 p-4 font-semibold text-sm lg:text-lg rounded-lg"
+            >
               <MdLogin className="flex lg:hidden" size="18" />
               <MdLogin className="hidden lg:flex" size="22" />
-            </button>
+            </Link>
           </div>
         </form>
       </div>
