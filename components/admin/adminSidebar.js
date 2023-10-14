@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { MdOutlineApps, MdOutlineAddChart, MdLogout } from "react-icons/md";
+import { MdOutlineApps, MdOutlineAddChart, MdBook, MdLogout } from "react-icons/md";
 
 export default function AdminSidebar() {
   return (
