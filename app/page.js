@@ -29,10 +29,10 @@ export default function Home() {
             alt="poltekkesSemarangLogo"
           />
           <div className="flex flex-col gap-4">
-            <p className="text-zinc-100 leading-relaxed text-center font-bold text-lg lg:text-2xl">
+            <p className="text-zinc-100 leading-relaxed text-center font-bold text-lg">
               Login
             </p>
-            <p className="text-zinc-300 leading-relaxed text-center font-semibold text-sm lg:text-lg">
+            <p className="text-zinc-300 leading-relaxed text-center font-medium text-sm">
               Silahkan masuk terlebih dahulu untuk mengakses dashboard Log Book
             </p>
           </div>
@@ -40,17 +40,16 @@ export default function Home() {
         <form className="flex flex-col gap-8">
           <InputField type={"text"} placeholder={"NIM"} />
           <InputField type={"password"} placeholder={"Password"} />
-          <div className="flex flex-row gap-8 items-center justify-between">
-            <p className="text-zinc-300 leading-relaxed text-start font-semibold text-sm">
+          <div className="flex flex-row gap-4 items-center justify-between">
+            <p className="text-zinc-300 leading-relaxed text-start font-medium text-sm">
               <span className="text-sky-300 mr-1">*</span>Pastikan kredensial
               yang dimasukkan sudah benar
             </p>
             <Link
               href="/user/dashboard"
-              className="bg-zinc-100 transition-all hover:bg-zinc-200 p-4 font-semibold text-sm lg:text-lg rounded-lg"
+              className="bg-zinc-100 transition-all hover:bg-zinc-200 p-4 font-medium text-sm rounded-2xl"
             >
-              <MdLogin className="flex lg:hidden" size="18" />
-              <MdLogin className="hidden lg:flex" size="22" />
+              <MdLogin size="18" />
             </Link>
           </div>
         </form>
@@ -63,7 +62,7 @@ function InputField({ type, placeholder }) {
   return (
     <input
       type={type}
-      className="flex w-full bg-zinc-800 text-zinc-100 px-4 lg:px-8 py-4 rounded-lg text-sm lg:text-lg transition-all hover:bg-zinc-700 focus:bg-zinc-700 focus:outline-none"
+      className="flex w-full bg-zinc-800 text-zinc-100 px-4 py-4 rounded-2xl text-center text-sm transition-all hover:bg-zinc-700 focus:bg-zinc-700 focus:outline-none"
       placeholder={placeholder}
     />
   );
